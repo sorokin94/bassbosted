@@ -25,7 +25,7 @@ osdbutton.onclick = function() {
 		savebutton.disabled=false;	
 		document.getElementById('zeroslicewarning').innerHTML = '';
 	}
-	document.getElementById('avnotes').innerHTML = avnotes;	
+	document.getElementById('avnotes').innerHTML = avnotes;
 	changeMidiParams();
 	wavesurfer.setEstBpm();
 	document.getElementById('estbpm').innerHTML = wavesurfer.getEstBpm();

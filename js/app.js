@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
         container     : document.querySelector('#waveform'),
         waveColor     : 'black',
         progressColor : 'orange',
-        cursorColor   : 'red',
+       // cursorColor   : 'red',
 		splitChannels: false,
 		height : 120,
        // backend: 'MediaElement',
@@ -55,7 +55,7 @@ wavesurfer.on('ready', function () {
 	wavesurfer.setLoFreq(250);
 	wavesurfer.setMidFreq(1000);
 	wavesurfer.setHiFreq(4000);
-	wavesurfer.setLoGain(48);
+	wavesurfer.setLoGain(0);
 	wavesurfer.setMidGain(0);
 	wavesurfer.setHiGain(0);
 	wavesurfer.setMidQ(1);	
