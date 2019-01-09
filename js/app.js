@@ -8,15 +8,31 @@ document.addEventListener('DOMContentLoaded', function () {
     var options = {
         container     : document.querySelector('#waveform'),
         waveColor     : 'black',
-        progressColor : 'black',
+        progressColor : 'orange',
         cursorColor   : 'red',
-		splitChannels: true,
-		height : 120
+		splitChannels: false,
+		height : 120,
+       // backend: 'MediaElement',
+        interact      : true,
+        cursorWidth   : 1,
+        barWidth : 3,
+        plugins: [
+            WaveSurfer.cursor.create({
+                showTime: true,
+                opacity: 1,
+                customShowTimeStyle: {
+                    'background-color': '#000',
+                    color: '#fff',
+                    padding: '2px',
+                    'font-size': '10px'
+                }
+            })
+        ]
     };
 
     wavesurfer.init(options);
     // Load audio from URL 
-    wavesurfer.load('examples/ol2.wav');
+    wavesurfer.load('examples/gimn_ukraini_-_aleksandr_ponomarev_(zf.fm).mp3');
 
 });
 
@@ -24,8 +40,8 @@ wavesurfer.on('ready', function () {
 	wavesurfer.clearRegions();
 	wavesurfer.resetThreshold();
 	wavesurfer.initLR();
-	wavesurfer.setThreshold(45);	// this is where first marker-drawing happens	
-	wavesurfer.zoom(50);
+	wavesurfer.setThreshold();	// this is where first marker-drawing happens
+	wavesurfer.zoom(1);
 	wavesurfer.setTempo(1.0);
 	wavesurfer.setPitch(1.0);
 	wavesurfer.setEnvAttack(0);
@@ -39,7 +55,7 @@ wavesurfer.on('ready', function () {
 	wavesurfer.setLoFreq(250);
 	wavesurfer.setMidFreq(1000);
 	wavesurfer.setHiFreq(4000);
-	wavesurfer.setLoGain(0);
+	wavesurfer.setLoGain(48);
 	wavesurfer.setMidGain(0);
 	wavesurfer.setHiGain(0);
 	wavesurfer.setMidQ(1);	

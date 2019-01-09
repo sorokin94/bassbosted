@@ -275,10 +275,10 @@ WaveSurfer.Filemaker = {
 	},
 	
 	pushzip: function(wavs, startnote, scale, timing) {
-		this.addSfz(wavs, startnote, scale);
-		this.addMid(wavs, startnote, scale, timing);
+	//	this.addSfz(wavs, startnote, scale);
+		//this.addMid(wavs, startnote, scale, timing);
 		for(var x=0; x<wavs.length; x++) {
-			this.zip.file("slices/" + this.filename + "_" + this.zeroFill(wavs[x].index) + ".wav", this.makewav(wavs[x].slice));
+			this.zip.file( this.filename + "_" + this.zeroFill(wavs[x].index) + ".wav", this.makewav(wavs[x].slice));
 		}	
 		var content = this.zip.generate({type:"blob"});  
 		saveAs(content, this.filename + ".zip");  
