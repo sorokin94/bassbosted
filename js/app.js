@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     wavesurfer.init(options);
     // Load audio from URL 
-    wavesurfer.load('examples/RSAC-Красная-девятка_000.wav');
+    wavesurfer.load('examples/RSAC-Красная-девятка.mp3');
 
 });
 
