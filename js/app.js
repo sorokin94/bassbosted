@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     wavesurfer.init(options);
     // Load audio from URL 
-    wavesurfer.load('examples/gimn_ukraini_-_aleksandr_ponomarev_(zf.fm).mp3');
+    wavesurfer.load('examples/RSAC-Красная-девятка_000.wav');
 
 });
 
